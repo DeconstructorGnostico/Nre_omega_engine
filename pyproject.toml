@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nre-omega-engine"
+version = "2.0.0"
+description = "NRE–AMM–OMEGA_CONTEXT_ENGINE: capa de control, interpretación, ejecución y verificación para modelos de IA"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Adrian Mendez Millan" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+nre-omega = "nre.cli:main"
+
+[tool.setuptools]
+packages = ["nre"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
